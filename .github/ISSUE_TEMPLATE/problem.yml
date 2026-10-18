@@ -1,0 +1,25 @@
+name: Something isn't working
+description: Report a problem with Mehtagent. Do not include prompts, files, emails or keys.
+labels: ["from-form"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Mehtagent version
+      description: Setup › About shows it.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where it happened
+      options: [Setup, Sessions, Calendar, Email, Browser add-on, Keys, Update, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did and what you saw. Leave out names, emails, file paths and anything you typed to the AI.
+    validations:
+      required: true
